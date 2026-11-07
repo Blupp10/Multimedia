@@ -1,0 +1,7 @@
+Taruh file video di folder ini dengan nama persis:
+  iklan-pocari.mp4
+
+(Opsional) gambar thumbnail sebelum video ke-load:
+  poster.jpg  (1920x1080)
+
+Ukuran video maksimal 100 MB (batas GitHub).

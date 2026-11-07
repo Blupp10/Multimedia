@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refresh Your Move — Iklan Pocari Sweat | Proyek Multimedia Systems</title>
+  <meta name="description" content="Landing page video iklan Pocari Sweat 60 detik — proyek mata kuliah Multimedia Systems, BINUS University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="Pocari Sweat — kembali ke atas">
+        <img src="assets/pocari-white.webp" alt="Pocari Sweat" class="logo logo--white">
+        <img src="assets/pocari.webp" alt="" class="logo logo--blue" aria-hidden="true">
+      </a>
+      <nav class="nav__links">
+        <a href="#tentang">Tentang</a>
+        <a href="#scene">Storyline</a>
+        <a href="#metadata">Metadata</a>
+        <a href="#referensi">Referensi</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <!-- Gelembung dekoratif (menggambarkan ion, sesuai animasi di iklan) -->
+    <div class="bubbles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Video Iklan · 60 Detik</p>
+        <h1 class="hero__title">Refresh your move<br>with <span>Pocari Sweat</span></h1>
+        <p class="hero__sub">Setiap orang punya gerakannya sendiri.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" data-play="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Tonton iklan
+          </button>
+          <a href="#tentang" class="btn btn--ghost">Lihat detail</a>
+        </div>
+      </div>
+
+      <!-- Kartu preview: video diputar otomatis tanpa suara (aturan autoplay browser) -->
+      <button class="preview" data-play="0" aria-label="Putar video iklan dengan suara">
+        <video class="preview__video" id="previewVideo"
+               src="assets/iklan-pocari.mp4" poster="assets/poster.jpg"
+               autoplay muted loop playsinline preload="metadata"></video>
+        <span class="preview__shade"></span>
+        <span class="preview__play">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+        <span class="preview__badge"><i></i>Preview</span>
+        <span class="preview__time" id="previewTime">01:00</span>
+        <span class="preview__caption">Klik untuk menonton dengan suara</span>
+      </button>
+    </div>
+
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z"/>
+    </svg>
+  </section>
+
+  <!-- ================= MODAL PEMUTAR VIDEO ================= -->
+  <div class="player" id="player" aria-hidden="true">
+    <button class="player__close" id="playerClose" aria-label="Tutup video">✕</button>
+    <video class="player__video" id="fullVideo" src="assets/iklan-pocari.mp4" controls playsinline preload="none"></video>
+  </div>
+
+  <!-- ================= DESKRIPSI ================= -->
+  <section class="section" id="tentang">
+    <div class="container about">
+      <div class="about__text">
+        <p class="label">Tentang Video</p>
+        <h2>Setiap orang punya gerakannya sendiri.</h2>
+        <p>
+          Iklan Pocari Sweat berdurasi 60 detik ini dibuat dengan tone yang energik, segar, dan dekat
+          dengan anak muda. Ceritanya mengikuti tiga talent dengan aktivitas berbeda:
+          <strong>Wayan</strong> bermain basket, <strong>Tania</strong> jogging, dan
+          <strong>Frolen</strong> menari di studio dance.
+        </p>
+        <p>
+          Walaupun gerakannya berbeda, tubuh mereka mengalami hal yang sama. Saat berkeringat, cairan dan
+          ion tubuh ikut berkurang tanpa disadari. Pocari Sweat hadir untuk menggantikan cairan dan ion tubuh
+          yang hilang, lalu video ditutup dengan momen lega ketiganya dan tagline bersama:
+          <em>“Refresh your move with Pocari Sweat.”</em>
+        </p>
+
+        <blockquote class="vo">
+          <p class="vo__label">Voice over</p>
+          <p>“Setiap orang punya gerakannya sendiri. Saat kamu mengejar yang kamu mau, tubuh bekerja lebih
+          keras dari yang terlihat. Cairan dan ion terus berkurang tanpa kamu sadari. Pocari Sweat —
+          menggantikan cairan dan ion tubuh yang hilang saat berkeringat.”</p>
+        </blockquote>
+      </div>
+
+      <div class="about__cards">
+        <div class="stat"><span class="stat__num">60<small>s</small></span><span class="stat__lbl">Durasi</span></div>
+        <div class="stat"><span class="stat__num">3</span><span class="stat__lbl">Talent</span></div>
+        <div class="stat"><span class="stat__num">7</span><span class="stat__lbl">Scene</span></div>
+        <div class="stat"><span class="stat__num">16:9</span><span class="stat__lbl">Video horizontal</span></div>
+      </div>
+    </div>
+
+    <!-- Talent -->
+    <div class="container talents">
+      <article class="talent">
+        <div class="talent__badge">🏀</div>
+        <h3>I Wayan Maha Acarya</h3>
+        <p class="talent__role">Basket · Lapangan basket</p>
+        <p>“Saat kamu mengejar yang kamu mau.”</p>
+      </article>
+      <article class="talent">
+        <div class="talent__badge">🏃‍♀️</div>
+        <h3>Tania Jessica Santosa</h3>
+        <p class="talent__role">Jogging · Jalan depan RTB</p>
+        <p>“Tubuh bekerja lebih keras dari yang terlihat.”</p>
+      </article>
+      <article class="talent">
+        <div class="talent__badge">💃</div>
+        <h3>Frolentika</h3>
+        <p class="talent__role">Dance · Studio DC 5</p>
+        <p>“Cairan dan ion terus berkurang tanpa kamu sadari.”</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= STORYLINE / SCENE ================= -->
+  <section class="section section--tint" id="scene">
+    <div class="container">
+      <p class="label">Storyline</p>
+      <h2>Alur 7 scene dalam 60 detik</h2>
+      <p class="lead">Klik salah satu scene untuk langsung menonton dari bagian itu.</p>
+
+      <ol class="timeline">
+        <li class="scene" data-play="0">
+          <span class="scene__time">00:00 – 00:04</span>
+          <h4>1 · Opening / Hook</h4>
+          <p>Cut cepat bola basket memantul, sepatu menyentuh aspal, dan langkah dance, lalu cuplikan ketiga talent dan logo Otsuka.</p>
+          <p class="scene__vo">“Setiap orang punya gerakannya sendiri.”</p>
+        </li>
+        <li class="scene" data-play="4">
+          <span class="scene__time">00:04 – 00:14</span>
+          <h4>2 · Wayan — Basket</h4>
+          <p>Low angle dribble dengan speed ramp ke wajah, crossover dan lay-up dengan slow motion saat bola masuk, lalu selebrasi “WOAH”.</p>
+          <p class="scene__vo">“Saat kamu mengejar yang kamu mau.”</p>
+        </li>
+        <li class="scene" data-play="14">
+          <span class="scene__time">00:14 – 00:24</span>
+          <h4>3 · Tania — Jogging</h4>
+          <p>Sport tracker dari atas, lari dari belakang dan samping dengan animasi gelembung ion, lalu mengelap keringat.</p>
+          <p class="scene__vo">“Tubuh bekerja lebih keras dari yang terlihat.”</p>
+        </li>
+        <li class="scene" data-play="24">
+          <span class="scene__time">00:24 – 00:34</span>
+          <h4>4 · Frolen — Dance</h4>
+          <p>Pemanasan, menari dengan pantulan cermin, wide shot dari belakang, lalu freeze pose dan close-up keringat slow motion.</p>
+          <p class="scene__vo">“Cairan dan ion terus berkurang tanpa kamu sadari.”</p>
+        </li>
+        <li class="scene" data-play="34">
+          <span class="scene__time">00:34 – 00:45</span>
+          <h4>5 · Pocari Sweat</h4>
+          <p>Produk dengan latar biru-putih, animasi bubble ion menyatu dengan cairan tubuh, lalu slow motion momen terbaik tiap talent.</p>
+          <p class="scene__vo">“Pocari Sweat — menggantikan cairan dan ion tubuh yang hilang saat berkeringat.”</p>
+        </li>
+        <li class="scene" data-play="45">
+          <span class="scene__time">00:45 – 00:54</span>
+          <h4>6 · Momen Lega</h4>
+          <p>Wayan di pinggir lapangan, Tania di bangku taman, dan Frolen di depan cermin, masing-masing minum Pocari Sweat dengan lega.</p>
+          <p class="scene__vo">SFX: tutup botol dibuka, tegukan, “hmm”.</p>
+        </li>
+        <li class="scene" data-play="54">
+          <span class="scene__time">00:54 – 01:00</span>
+          <h4>7 · Penutup</h4>
+          <p>Split screen tiga kolom, ketiganya mengucapkan tagline, lalu end frame botol Pocari Sweat dengan teks “Go Sweat” dan “Go Ion”.</p>
+          <p class="scene__vo">“Refresh your move with Pocari Sweat.”</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= ELEMEN MULTIMEDIA ================= -->
+  <section class="section" id="elemen">
+    <div class="container">
+      <p class="label">Elemen Multimedia</p>
+      <h2>Apa saja yang ada di dalam video</h2>
+      <div class="grid5">
+        <div class="el"><span class="el__icon">T</span><h4>Teks</h4><p>Nama talent dan cabang olahraga di tiap scene, tagline, teks “Go Sweat” dan “Go Ion”.</p></div>
+        <div class="el"><span class="el__icon">▣</span><h4>Gambar</h4><p>Logo Otsuka sebagai overlay di kanan atas sepanjang video, visual produk Pocari Sweat.</p></div>
+        <div class="el"><span class="el__icon">♪</span><h4>Audio</h4><p>Musik latar, voice over, SFX pantulan bola, napas, detak jantung, tutup botol, tegukan.</p></div>
+        <div class="el"><span class="el__icon">◎</span><h4>Animasi</h4><p>Gelembung ion dari punggung Tania, bubble ion yang menyatu dengan cairan tubuh, transisi.</p></div>
+        <div class="el"><span class="el__icon">▶</span><h4>Video</h4><p>Footage live action dengan speed ramp, slow motion, pantulan cermin, dan split screen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METADATA ================= -->
+  <!-- Ganti teks bertanda [isi] dengan data asli dari MediaInfo. Yang bertanda "auto" diisi otomatis oleh script.js -->
+  <section class="section section--tint" id="metadata">
+    <div class="container">
+      <p class="label">Metadata Video</p>
+      <h2>Spesifikasi teknis</h2>
+      <p class="lead">Data bertanda <span class="chip">auto</span> dibaca langsung dari file video oleh browser.</p>
+
+      <div class="meta">
+        <div class="meta__group">
+          <h3>Umum</h3>
+          <dl>
+            <dt>Judul</dt><dd>Refresh Your Move — Pocari Sweat</dd>
+            <dt>Durasi</dt><dd id="m-duration">auto</dd>
+            <dt>Format container</dt><dd>MPEG-4 (.mp4)</dd>
+            <dt>Ukuran file</dt><dd id="m-size">auto</dd>
+            <dt>Bitrate total</dt><dd>[isi] Mbps</dd>
+            <dt>Tanggal produksi</dt><dd>[isi] November 2026</dd>
+          </dl>
+        </div>
+
+        <div class="meta__group">
+          <h3>Video</h3>
+          <dl>
+            <dt>Resolusi</dt><dd id="m-res">auto</dd>
+            <dt>Aspect ratio</dt><dd id="m-ratio">auto</dd>
+            <dt>Frame rate</dt><dd>[isi] fps (mis. 30 fps, constant)</dd>
+            <dt>Codec</dt><dd>H.264 / AVC ([isi] profile)</dd>
+            <dt>Bitrate video</dt><dd>[isi] Mbps</dd>
+            <dt>Scan type</dt><dd>Progressive</dd>
+            <dt>Color / bit depth</dt><dd>YUV 4:2:0, 8-bit</dd>
+          </dl>
+        </div>
+
+        <div class="meta__group">
+          <h3>Audio</h3>
+          <dl>
+            <dt>Codec</dt><dd>AAC-LC</dd>
+            <dt>Channel</dt><dd>Stereo (2 channel)</dd>
+            <dt>Sample rate</dt><dd>[isi] kHz (mis. 48 kHz)</dd>
+            <dt>Bitrate audio</dt><dd>[isi] kbps</dd>
+            <dt>Isi audio</dt><dd>Musik latar, voice over, sound effect</dd>
+          </dl>
+        </div>
+
+        <div class="meta__group">
+          <h3>Produksi</h3>
+          <dl>
+            <dt>Perangkat rekam</dt><dd>[isi, mis. iPhone 13 — kamera belakang]</dd>
+            <dt>Mode rekam</dt><dd>[isi, mis. 1080p 30fps &amp; 120fps untuk slow motion]</dd>
+            <dt>Stabilizer</dt><dd>[isi, mis. handheld / gimbal]</dd>
+            <dt>Rekam voice over</dt><dd>[isi, mis. mic HP / clip-on mic]</dd>
+            <dt>Software editing</dt><dd>[isi, mis. CapCut / Premiere Pro]</dd>
+            <dt>Lokasi syuting</dt><dd>Lapangan basket, jalan depan RTB, DC 5</dd>
+            <dt>Talent</dt><dd>Wayan, Tania, Frolen</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METODE PENYAMPAIAN ================= -->
+  <section class="section" id="delivery">
+    <div class="container delivery">
+      <div>
+        <p class="label">Metode Penyampaian</p>
+        <h2>Bagaimana video ini sampai ke kamu</h2>
+      </div>
+      <p>
+        Video disajikan lewat website statis yang di-hosting di <strong>GitHub Pages</strong> dengan metode
+        <strong>progressive download</strong> melalui HTTPS: browser mulai memutar video sambil sisa file
+        masih diunduh, tanpa perlu menunggu file selesai. Format MP4 (H.264 + AAC) dipilih karena didukung
+        hampir semua browser dan perangkat. Preview di bagian atas diputar otomatis tanpa suara
+        (aturan autoplay browser), lalu penonton bisa membuka pemutar untuk menonton versi penuh dengan suara.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= REFERENSI ================= -->
+  <section class="section section--tint" id="referensi">
+    <div class="container">
+      <p class="label">Referensi</p>
+      <h2>Sumber &amp; aset yang digunakan</h2>
+      <ul class="refs">
+        <li>
+          <span class="refs__tag">Brand</span>
+          <div><a href="https://www.pocarisweat.id/" target="_blank" rel="noopener">Pocari Sweat Indonesia — situs resmi</a>
+          <p>Acuan warna, gaya visual, dan informasi produk (cairan &amp; ion tubuh).</p></div>
+        </li>
+        <li>
+          <span class="refs__tag">Brand</span>
+          <div><a href="https://www.otsuka.co.id/" target="_blank" rel="noopener">PT Amerta Indah Otsuka</a>
+          <p>Produsen Pocari Sweat di Indonesia; logo Otsuka dipakai sebagai overlay.</p></div>
+        </li>
+        <li>
+          <span class="refs__tag">Musik</span>
+          <div><a href="#" target="_blank" rel="noopener">[isi judul lagu — artis / sumber, mis. YouTube Audio Library]</a>
+          <p>[isi lisensi, mis. royalty-free / Creative Commons]</p></div>
+        </li>
+        <li>
+          <span class="refs__tag">SFX</span>
+          <div><a href="#" target="_blank" rel="noopener">[isi sumber sound effect, mis. Pixabay / Freesound]</a>
+          <p>Pantulan bola, detak jantung, tutup botol, tegukan.</p></div>
+        </li>
+        <li>
+          <span class="refs__tag">Inspirasi</span>
+          <div><a href="#" target="_blank" rel="noopener">[isi link iklan Pocari Sweat yang jadi inspirasi]</a>
+          <p>Referensi gaya sinematografi &amp; pacing.</p></div>
+        </li>
+        <li>
+          <span class="refs__tag">Tools</span>
+          <div><a href="https://mediaarea.net/en/MediaInfo" target="_blank" rel="noopener">MediaInfo</a>
+          <p>Dipakai untuk membaca metadata teknis file video.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <img src="assets/pocari-white.webp" alt="Pocari Sweat" class="footer__logo">
+        <p>Refresh your move.</p>
+      </div>
+      <div class="footer__info">
+        <p><strong>Proyek Mata Kuliah Multimedia Systems</strong><br>Computer Science · BINUS University · 2026</p>
+        <p>Kelompok: Wayan · Tania · Frolen [isi nama lengkap / NIM bila perlu]</p>
+        <p class="footer__note">Dibuat untuk keperluan akademik. Bukan situs resmi Pocari Sweat atau PT Amerta Indah Otsuka.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
